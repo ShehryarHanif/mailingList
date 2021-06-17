@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Mailing List</title>
+
+        <meta charset="utf-8">
+
+        <meta name="author" content="Shehryar Hanif">
+        <meta name="description" content="Small Mailing List Project">
+
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+
+    <body>
+        <div class="flex-container">
+            <div class="container">
+                <h1>JOIN THE WAITLIST</h1>
+
+                <h3>Enter your email to join the mailing list.</h3>
+        
+                <%- include("./partials/countStuff.ejs"); %>
+        
+                <form method="POST" action="/register">
+                    <input class="entry" type="email" name="email" placeholder="Enter Your Email" required>
+        
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Mailing List</title>
+
+        <meta charset="utf-8">
+
+        <meta name="author" content="Shehryar Hanif">
+        <meta name="description" content="Small Mailing List Project">
+
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+
+    <body>
+        <div class="flex-container">
+            <div class="container">
+                <h2>HERE'S THE COUNT</h2>
+
+                <%- include("./partials/countStuff.ejs"); %>
+
+                <h6>The following people joined most recently:</h6>
+
+                <ul>
+                    <% for(let i=0; i <resultsList.length; i++) {%>
+                       <li><%= resultsList[i] %></li>
+                    <% } %>
+                </ul>
+        
+                <h6 class="lead">GO TO THE <a href="/">HOME PAGE</a></h6>
+            </div>
+        </div>
+    </body>
+</html>
